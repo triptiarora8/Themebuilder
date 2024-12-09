@@ -1,0 +1,845 @@
+
+import './App.css'
+import Footer from './components/custom/Footer'
+import Header from './components/custom/Header'
+import Main from './components/custom/Main'
+
+
+function App() {
+
+  return (
+    <>
+    <Header/>
+    <Main/>
+    <Footer/>
+    </>
+  )
+}
+
+export default App
+Header.tsx: 
+import CustomMenuBar from "./CustomMenuBar"
+import {
+  Menubar,
+  MenubarMenu
+} from "@/components/ui/menubar";
+export default function Header() {
+  return (
+    <>
+    <div className="h-[872px] w-full bg-cover bg-center " style={{ backgroundImage: `url('./images/image20.svg')` }}>
+        <CustomMenuBar/>
+        <div className="my-[4rem]">
+          <div className="flex flex-col items-center w-full mt-[4rem] mb-[2rem]">
+            <h2 className="flex items-center text-7xl font-bold" style={{ fontFamily: "Bricolage Grotesque" }}>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6158FC] via-[#FF3FA8] to-[#FF8234]">
+                 Effortlessly
+              </span>
+              <span className="ml-2">create templates that are</span>
+            </h2>
+          <div className="my-3 flex justify-center items-center">
+            <p className="w-[952px] text-center font-medium text-[24px] leading-[32.5px]">
+              Thebuilder offers over 10,000 fully responsive UI components to kickstart your projects. You don't need to be a designer to craft stunning templates!
+            </p>
+          </div>
+         </div>
+        </div>
+        <div>
+        <div className="relative flex justify-center items-center h-[152px] w-[612px] mx-auto">
+            <div className="absolute bottom-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat inset-0 bg-[url('/border.png')]"></div>
+            {/* <div className="flex justify-center items-center mx-auto h-[143px] w-[612px]"style={{
+            backgroundImage: `url(${border})`,
+             backgroundSize: 'cover', backgroundPosition: 'center',
+          }}> */}
+
+            {/* </div> */}
+            {/* <img src={border}/> */}
+        <div className="absolute top-0 flex justify-center items-center w-full h-[80%] ">
+            <h3 className="text-[80px]/[0] font-[700] text-center " style={{ color: "#7C54EE", fontFamily:"Bricolage Grotesque"}}>Beautiful</h3>
+          </div>
+        </div>
+        </div>
+        <div className="relative flex justify-center items-center ">
+        <div className="absolute top-[-56px] left-[1183px] ">
+            <img  className="h-[50px] w-[50px]" src="/images/rightarrow.png" alt="right arrow"/>
+          </div>
+          <div className="absolute w-[250px] items-center top-[-8.5px] left-[1234px] mt-[1rem] ml-[1rem]"> 
+              <button className=" p-[1px] font-bricolage font-[800] text-[35px]/[42px] bg-gradient-to-r from-[#6158FC] via-[#FF3FA8] to-[#FF8234] rounded-2xl"
+              style={{
+                 boxShadow: '0px 3px 15px rgba(97, 88, 252, 0.2), 0px 3px 15px rgba(255, 63, 168, 0.2), 0px 3px 15px rgba(255, 130, 52, 0.2)'
+              }}
+              >
+              <div className="bg-white  h-full w-full pt-[8px] pb-[15px] pl-[36px] pr-[30px] rounded-2xl">
+              Try demo
+              </div>
+              </button>
+            </div>
+        </div>
+    </div>
+      <div className="relative h-[872px] w-full bg-cover bg-center" style={{backgroundImage: `url("/images/gradiantImage.png")`, border: "transparent", borderTopLeftRadius:"120px"}}>
+        <div className="absolute flex justify-center top-[-100px] left-[287.79px]" style={{border:"transparent", borderRadius:"12.5px"}}>   
+              <img src="/images/div-framer-window.png" alt="div window frame" className="w-[1349px] h-[700px]" />          
+        </div>
+    <div className="flex flex-col justify-end w-full h-full items-center ">
+      <div className="flex justify-center ">
+        <h3 className="text-4xl font-medium font-inter text-[#909090] ">Supported Framework</h3>
+      </div>
+      <Menubar className="w-fit h-fit text-black flex justify-evenly space-x-3  leading-[21.78px] pb-[50px] border-transparent mt-5">
+        <MenubarMenu>
+        <div className="flex justify-center items-center pr-[50px]">
+            <div className="flex justify-center items-center w-[52.43px] h-[50px] bg-white border-transparent rounded-full">
+            <img src="/images/tailwindlogo.png" alt="Tailwind logo" 
+            className="w-[33px] h-[26px] bg-contain" />
+            </div>
+            <span className="font-bricolage text-3xl/9 font-normal">Tailwind CSS</span>
+          </div>
+
+            <div className="flex justify-center items-center pr-[50px]">
+            <div className="flex justify-center items-center w-[52.43px] h-[50px] bg-white border-transparent rounded-full">
+            <img src="/images/bootstrap.png" alt="Bootstrap logo" 
+            className="w-[34.95px] h-[30.87px] bg-contain " />
+            </div>
+            <span className="font-bricolage text-3xl/9 font-normal">Bootstrap</span>
+          </div>
+
+          <div className="flex justify-center items-center pr-[50px]">
+            <div className="flex justify-center items-center w-[52.43px] h-[50px] bg-white border-transparent rounded-full">
+            <img src="/images/materialUI.png" alt="Material UI logo" 
+            className="w-[30px] h-[24px] bg-contain " />
+            </div>
+            <span className="font-bricolage text-3xl/9 font-normal">Material UI</span>
+          </div>
+
+          <div className="flex justify-center items-center pr-[50px]">
+            <div className="flex justify-center items-center w-[52.43px] h-[50px] bg-white border-transparent rounded-full">
+            <img src="/images/bulma.png" alt="Bulma logo" 
+            className="w-[25px] h-[36px] bg-contain "/>
+            </div>
+            <span className="font-bricolage text-3xl/9 font-normal">Bulma</span>
+          </div>
+        </MenubarMenu>
+      </Menubar>
+    </div>
+  </div>
+  </>
+  )
+}
+import {
+  Menubar,
+  MenubarMenu,
+} from "@/components/ui/menubar";
+import { MenubarTrigger } from "@radix-ui/react-menubar";
+
+
+export default function MenubarDemo() {
+  return (
+    <div className="flex items-center justify-around">
+  <div className="flex  space-x-4 mt-[3rem] ">
+    <h3 className="font-extrabold w-auto h-[29px] text-[30px] leading-[29px]" style={{fontFamily: "Bricolage Grotesque"}}>ThemeBuilder</h3>
+  </div>
+
+  <Menubar className=" bg-black w-fit h-fit text-white flex justify-evenly space-x-3 mt-[3rem] mr-[1%] p-0 leading-[21.78px]" style={{ border: "2px solid black", borderRadius:"16px" }}>
+    <MenubarMenu>
+      <MenubarTrigger className="py-[22px] pl-[69px] ">Products</MenubarTrigger>
+      <MenubarTrigger className="py-[22px] pl-[89px] ">UI Libraries</MenubarTrigger>
+      <MenubarTrigger className="py-[22px] pl-[89px] ">How it works</MenubarTrigger>
+      <MenubarTrigger className="py-[22px] pl-[89px] ">Pricing</MenubarTrigger>
+      <MenubarTrigger className="py-[22px] pl-[69px] pr-[70px] ">Blogs</MenubarTrigger>
+    </MenubarMenu>
+  </Menubar>
+
+  <div className=" flex items-center  space-x-4 mt-[3rem]  ">
+    <h5 className="text-xl py-[22px] pl-[20px] pr-[20px] w-auto">Sign In</h5>
+    <button className="bg-black text-white text-xl py-[22px] pl-[20px] pr-[20px] w-auto" style={{ border: "2px solid black", borderRadius:"1rem" }}>Try Free demo</button>
+  </div>
+</div>
+ 
+  );
+}
+Main.tsx: 
+import CustomCard from "./CustomCard";
+import Marquee from "./Marquee";
+import SlidingSections from "./SlidingSections";
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardFooter,
+//   CardHeader,
+//   CardTitle,
+// } from "@/components/ui/card";
+
+export default function Main() {
+  return (
+    <div>
+      <div className="flex justify-center items-center bg-white font-bricolage font-bold mt-[85px] text-[80px]/[96px]">
+        <div className="flex justify-center items-center w-[938px] text-center">
+          <p className="">
+            Built Stunning Lay outs with Our
+            <span
+              className="ml-[16px] bg-clip-text text-transparent bg-gradient-to-r 
+              from-[#6158FC] via-[#FF3FA8] to-[#FF8234]"
+            >
+              Features
+            </span>
+          </p>
+        </div>
+      </div>
+      <CustomCard />
+      <Marquee />
+      <SlidingSections/>
+      <div className="w-full h-[863px] relative top-[-150px] " 
+      style={{background: "radial-gradient(73.5% 82.84% at 50% 50%, rgba(125, 73, 180, 0.40) 0%, rgba(206, 176, 238,0.26) 50%, rgba(255, 255, 255, 0.00) 100%)"}}
+      >
+        <img src="/images/menu item.png" alt="menu item" className="absolute top-[46px] left-[71px]  w-[169px] h-[246px]" />
+        <img src="/images/rightarrow.png" alt="right arrow" className="absolute top-[241px] left-[189px]  w-[60px] h-[60px]" />
+        <img src="/images/Graphic.png" alt="Graphic" className="absolute top-[46px] left-[616px]  w-[149px] h-[145px]" />
+        <img src="/images/error.png" alt="error sign" className="absolute  left-[1043px] w-[251px] h-[191px]" />
+        <img src="/images/got it.png" alt="got it" className="absolute top-[69px] left-[1671px] w-[224px] h-[128px]" />
+        <img src="/images/color patate.png" alt="color palate" className="absolute  top-[200px] left-[200px] w-[127px] h-[182px]" />
+        <img src="/images/motion magic.png" alt="motion magic" className="absolute top-[522px] w-[481px] h-[271px]" />
+        <img src="/images/click and drag.png" alt="click and drag" className="absolute top-[400px] left-[400px] w-[314px] h-[88px]" />
+        <img src="/images/vector.png" alt="vector" className="absolute  top-[630px] left-[1742px]  w-[154px] h-[168px]" /> 
+      </div>
+      <div className="w-full h-[1123px] relative top-[-149px] bg-black " >        
+      </div>
+      <div className="w-full h-[1000px]">
+        <div className="flex justify-center items-center mb-[110px] ">
+          <div className="w-[680px] text-center space-y-2">
+          <div className="font-bricolage font-normal text-[40px]/[48px]"> From Our Blog 
+          </div>
+          <div className="font-bricolage font-bold text-[80px]/[96px]"> Get the latest on 
+          </div>
+          <div className="font-bricolage font-bold text-[80px]/[96px] bg-clip-text text-transparent bg-gradient-to-r 
+              from-[#6158FC] via-[#FF3FA8] to-[#FF8234]"> Themebuilder
+          </div>
+          </div>
+        </div>
+        <div className="flex justify-evenly">
+          <div className="space-y-[20px]">
+            <img src="/images/integrate image.png" alt="integrate image" className="w-[450px] h-[440px]"/>
+            <div className="font-bricolage font-bold w-[450px] h-[72px]  text-[#6D56F6] text-[30px]/[36px]">Explore what's new in Themebuilder </div>
+            <div className="font-bricolage font-light w-[450px] h-[72px]  text-black text-[20px]/[27px]">Is no-code a threat to developers' jobs or a benefit? Find out  </div>
+            <div className="flex justify-between w-[100px] h-[27px]">
+            <a href="#" className="font-bricolage font-semibold w-[100px] h-[27px]  text-[#6D56F6] text-[14px]/[27px]">READ MORE</a>
+            <img src="/images/Arrow 6.png" alt="arrow" className="w-[10px] h-[10px] m-0  relative top-[9px]"/>
+            
+            </div>
+          </div>
+          
+          
+          <div className="flex justify-evenly">
+          <div className="space-y-[20px]">
+            <img src="/images/explore new trends.png" alt="explore new trends" className="w-[450px] h-[440px]"/>
+            <div className="font-bricolage font-bold w-[450px] h-[72px]  text-[#FE3FA8] text-[30px]/[36px]">Explore new trends in Ui designing and devlopment </div>
+            <div className="font-bricolage font-light w-[450px] h-[72px]  text-black text-[20px]/[27px]">Is no-code a threat to developers' jobs or a benefit? Find out  </div>
+            <div className="flex justify-between w-[100px] h-[27px]">
+            <a href="#" className="font-bricolage font-semibold w-[100px] h-[27px]  text-[#6D56F6] text-[14px]/[27px]">READ MORE</a>
+            <img src="/images/Arrow 6.png" alt="arrow" className="w-[10px] h-[10px] m-0  relative top-[9px]"/>
+            
+            </div>
+          </div>
+          </div>          
+
+          <div className="flex justify-evenly">
+          <div className="space-y-[20px]">
+            <img src="/images/explore.png" alt="explore" className="w-[450px] h-[440px]"/>
+            <div className="font-bricolage font-bold w-[450px] h-[72px]  text-[#FF7C3F] text-[30px]/[36px]">Bring your design to life with our Themebuilder</div>
+            <div className="font-bricolage font-light w-[450px] h-[72px]  text-black text-[20px]/[27px]">Is no-code a threat to developers' jobs or a benefit? Find out  </div>
+            <div className="flex justify-between w-[100px] h-[27px]">
+            <a href="#" className="font-bricolage font-semibold w-[100px] h-[27px]  text-[#6D56F6] text-[14px]/[27px]">READ MORE</a>
+            <img src="/images/Arrow 6.png" alt="arrow" className="w-[10px] h-[10px] m-0  relative top-[9px]"/>
+            
+            </div>
+          </div>
+          </div>  
+
+        </div>
+
+      </div>
+      <div
+            className="h-[1100px] mt-[187px] w-full bg-cover bg-center"
+            style={{
+              backgroundImage:`url('/images/gradiant image.png')`,
+            }}
+          >
+            <div className="flex justify-center items-center w-full h-[160px] pt-[200px]">
+          <div className="w-[820px] ">
+          <div className="font-bricolage text-white font-normal text-[80px]/[80px]">See what our users are sharing about us!
+          </div>
+          <div className="flex justify-center items-center pt-[60px]"> 
+          <img src="/images/images.png" alt="face images" className="h-[67px] w-[242px]"/>
+              <img src="/images/star.png" alt="5 star" className="w-[200px] h-[100px] relative top-[30px] pl-[10px]"/>
+          </div>
+
+          </div>
+        </div>
+        <div className="flex justify-evenly mt-[300px]">
+        <div className="flex animate-marquee space-x-[65px] "style={{boxShadow: "18px 22px 23px 0px #CCB1F"}}>
+        <div className="flex justify-center items-center bg-white w-[406px] h-[298px] rounded-xl " >
+          <div className="flex flex-col items-center w-[350px] h-[230px] " >
+            <img src="/images/feedback 1.png" alt="feedback 1" className="w-[56px] h-[56px]" />
+            <div className="w-[339px] h-[103px] text-center pt-[15px] font-Inter font-normal text-[14px]/[25.6px]">"I love how simple Themebuilder makes it for Devlopers to design and save there 
+              time.Its intuitive design and powerful features allowed us to streamline our processes
+               like never before.</div>
+            <img src="/images/5 star.png" alt="5 star" className="w-[98px] h-[22px] relative top-[28px]" />
+            <div className="w-[135px] h-[23px] text-center text-[#7A7A7A] pt-[40px] font-Inter font-medium text-[18px]/[24.6px]">Jackson Schaal</div>
+            
+          </div>
+        </div>          
+        <div className="flex justify-center items-center bg-white w-[406px] h-[298px] rounded-xl">
+          <div className="flex flex-col items-center w-[350px] h-[230px] " >
+            <img src="/images/feedback 2.png" alt="feedback 2" className="w-[56px] h-[56px]" />
+            <div className="w-[339px] h-[103px] text-center pt-[15px] font-Inter font-normal text-[14px]/[25.6px]">"I love how simple Themebuilder makes it for Devlopers to design and save there 
+              time.Its intuitive design and powerful features allowed us to streamline our processes
+               like never before.</div>
+            <img src="/images/5 star.png" alt="5 star" className="w-[98px] h-[22px] relative top-[28px]" />
+            <div className="w-[135px] h-[23px] text-center text-[#7A7A7A] pt-[40px] font-Inter font-medium text-[18px]/[24.6px]">Jackson Schaal</div>
+            
+          </div>
+        </div>      
+        <div className="flex justify-center items-center bg-white w-[406px] h-[298px] rounded-xl">
+          <div className="flex flex-col items-center w-[350px] h-[230px] " >
+            <img src="/images/feedback 3.png" alt="feedback 3" className="w-[56px] h-[56px]" />
+            <div className="w-[339px] h-[103px] text-center pt-[15px] font-Inter font-normal text-[14px]/[25.6px]">"I love how simple Themebuilder makes it for Devlopers to design and save there 
+              time.Its intuitive design and powerful features allowed us to streamline our processes
+               like never before.</div>
+            <img src="/images/5 star.png" alt="5 star" className="w-[98px] h-[22px] relative top-[28px]" />
+            <div className="w-[135px] h-[23px] text-center text-[#7A7A7A] pt-[40px] font-Inter font-medium text-[18px]/[24.6px]">Jackson Schaal</div>
+            
+          </div>
+        </div> 
+        <div className="flex justify-center items-center bg-white w-[406px] h-[298px] rounded-xl">
+          <div className="flex flex-col items-center w-[350px] h-[230px] " >
+            <img src="/images/feedback 4.png" alt="feedback 4" className="w-[56px] h-[56px]" />
+            <div className="w-[339px] h-[103px] text-center pt-[15px] font-Inter font-normal text-[14px]/[25.6px]">"I love how simple Themebuilder makes it for Devlopers to design and save there 
+              time.Its intuitive design and powerful features allowed us to streamline our processes
+               like never before.</div>
+            <img src="/images/5 star.png" alt="5 star" className="w-[98px] h-[22px] relative top-[28px]" />
+            <div className="w-[135px] h-[23px] text-center text-[#7A7A7A] pt-[40px] font-Inter font-medium text-[18px]/[24.6px]">Jackson Schaal</div>
+            
+          </div>
+        </div> 
+      </div>
+        </div>
+        <div className="flex justify-center items-end ">
+          <div className="relative font-bricolage font-bold top-[180px] text-[80px]/[80px]">Pricing</div>
+        </div>
+        <div>
+
+        </div>
+
+
+          </div>
+      <div className="w-full h-[1000px]">
+        <div className="flex justify-center " >
+          <div className=" h-[51px] w-[247px] pt-2 pl-2" style={{border: "#BBBBBB 1px solid", borderRadius:"999px"}}>
+            <div className="flex justify-between items-center">
+            <div className="bg-[#202020] pt-1 text-[16px]/[20px] font-Inter font-bold text-center h-[36px] w-[123px] text-white" style={{border: "#BBBBBB 1px solid", borderRadius:"50px"}}>ANNUAL</div>
+            <div className=" h-[20px] w-[106px] text-[16px]/[20px] font-Inter font-bold " style={{borderRadius:"50px"}}>QUATERLY</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+Marquee.tsx:
+
+export default function Marquee() {
+  return (
+    <div className="flex overflow-hidden mt-[100px] w-full h-[180px] font-extrabold font-bricolage text-[150px]/[180px]">
+      <div className="flex animate-marquee space-x-[20px]">
+        <div>Build</div>
+        <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#6158FC] via-[#FF3FA8] to-[#FF8234]">Better</div>
+        <div>Build</div>
+        <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#6158FC] via-[#FF3FA8] to-[#FF8234]">Faster</div>
+        
+      </div>
+      
+    </div>
+  )
+}
+CustomCard.tsx:
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+  } from "@/components/ui/card"
+
+export default function CustomCard() {
+  return (
+    <div className=" w-full h-[1100px]">
+        <div className="flex justify-evenly mt-[100px]">
+        <div className="bg-[rgba(207,201,253,0.49)] ml-[273px] w-[612px] h-[305px] border-transparent border-[12px] 
+        shadow-[0px_4px_6px_rgba(207,201,253,0.49)] rounded"
+        >
+         <div className="relative">
+            <p className="w-[305px] pl-[35px] pt-[60px] font-bricolage font-bold text-[#7C54EE] text-[30px]/[36px]">Easy-to-Use Drag-and-Drop Interface</p>
+            <p  className="w-[284px] pl-[30px] pt-[22px] font-inter font-medium text-[18px]/[21px]">Emphasize the simplicity of your app's interface,
+               making it accessible even to those with little to no coding experience.</p>
+            <div className=" absolute left-[376px] top-[55px] w-[279px] h-[284px] bg-transparent">
+            <img src="/images/starkitmain.png" alt="starkit homepage" className=" shadow-[0px_4px_6px_rgba(0,0,0,0.25)]"/>
+            </div>
+          </div>
+        </div>
+        <div>
+        <Card className="bg-black text-white w-[286px] h-[520px] ml-[139px] rounded-xl">
+          <CardHeader>
+            <CardTitle className="flex justify-between mt-4 mb-10">
+              <div className="pl-4 font-bricolage font-bold text-[30px] leading-[26px]">
+                Try now
+              </div>
+              <div className="flex justify-center items-center bg-white w-[30px] h-[30px] rounded-full">
+                <img
+                  className="w-4 bg-contain"
+                  src="/images/arrow.png"
+                  alt="arrow"
+                />
+              </div>
+            </CardTitle>
+            <CardDescription className="relative  w-[267px] h-[245px] items-center  overflow-hidden">
+              <div className="absolute ">
+              <pre className="text-sm whitespace-pre-wrap bg-clip-text text-transparent bg-gradient-to-b from-[#9D86FCD1] to-[black] ">
+              
+              {`<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+          }
+  </style>
+      </head>
+        <body>
+          <!-- Your content here -->
+        </body>
+        </html>`}
+            
+                      </pre>
+              </div>
+</CardDescription>
+          </CardHeader>
+          <CardContent className="w-[272px] h-[48px] pl-[18px]">
+            <p className="font-bricolage font-normal text-[20px]/[24px]">Code Generation</p>
+          </CardContent>
+          <CardFooter className="pl-[12px]">
+            <p className="font-bricolage font-bold text-[48px]/[56.70px]">Automatic</p>
+          </CardFooter>
+        </Card>
+        </div>
+        <div className="mr-[260px] ml-[50px]  ">
+        <Card className="bg-[#384EB6] w-[317px] h-[274px] rounded-xl">
+          <CardHeader >
+          <div>
+            <p className="font-bricolage font-bold text-white text-[30px]/[36px]">Responsive Design</p>
+          </div>
+          <div className="relative">
+            <img src="images/image 42.png" alt="image 42" className="h-[159px] w-[268px] absolute top-[46px] left-[-24px] "/>
+          </div>
+          </CardHeader>
+        </Card>
+        </div>
+      </div> 
+      
+       <div className="relative flex flex-col justify-end">
+        <div className="absolute top-[-135px] ml-[270px] bg-black w-[314px] h-[240px] rounded-xl">
+          <img src="/images/group (1) 2.svg" alt="group 1" className="absolute left-[251px]" />
+          <div className="flex flex-col justify-end w-[240px] h-full">
+            <div className="flex flex-col justify-end items-start w-[240px] pl-[28px]">
+              <p className="font-bricolage font-normal text-white text-[19px]/[22px]">
+                Integration with
+              </p>
+              <p className="font-bricolage font-bold text-white text-[24px]/[28px] pb-[20px]">
+                External Services
+              </p>
+        </div>
+      </div>
+  </div>
+      </div>
+      <div className="relative">
+        <Card className="absolute top-[-134px] left-[624px] bg-[#6A57F8] text-black w-[319px] h-[535px] rounded-xl">
+          <CardHeader className="">
+            <CardTitle className=" w-[220px] h-[105px] font-bricolage font-bold justify-between mt-4  text-[100px]/[120px]">100+
+            </CardTitle>
+            <CardDescription className="w-[270px] h-[49px] font-bricolage font-bold text-[24px]/[28px]">Templates and Themes
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="relative ">
+            <img src="/images/Group 35543.png" alt="group 389" className="absolute  top-[50px] left-[77px] h-[102px] w-[158px]  "/>
+            <img src="/images/image 47.svg" alt="image 47" className="absolute top-[75px] left-[0px] h-[105px] w-[189px]  "/>
+            <img src="/images/image 46.svg" alt="image 46" className=" absolute h-[105px] w-[189px] top-[204px] left-[133px] "/>
+          </CardContent>
+          {/* <CardFooter className="pl-[12px]">
+            <p className="font-bricolage font-bold text-[48px]/[56.70px]">Automatic</p>
+          </CardFooter> */}
+        </Card>
+        </div>
+      <div className=" relative flex ">
+          <div className="absolute top-[146px] left-[269px] bg-[#FBF6FC] w-[317px] h-[263px] rounded-xl">
+              <div className="font-bricolage font-bold text-black text-[20px]/[24px] w-[272px] h-[24px] pl-[8px] pt-[18px]">
+                Customization Options
+              </div>
+          <img src="/images/image 43.svg" alt="image43" className="absolute top-[50px]" />
+          <img src="/images/image 44.svg" alt="image 44" className="absolute left-[-50px] top-[172px] w-[74px] h-[30px]" />
+     </div>
+      </div>
+      <div className="relative flex justify-end mr-[260px] ml-[50px]  ">
+        <Card className="absolute  bg-[#FE985C] top-[-199px] w-[317px] h-[274px] rounded-xl">
+          <CardHeader className="p-0">
+          <div className="relative ">
+            <img src="images/image 45.png" alt="image 45" className="h-[107px] w-[314px] absolute top-[30px]  "/>
+          </div>
+          </CardHeader>
+          <CardDescription className="flex flex-col justify-end w-[314px] h-full">
+            <div className="flex flex-col justify-end items-start pb-[22px] pl-[20px]">
+              <p className="font-bricolage font-light text-black w-[272px] h-[26px] text-[16px]/[19.2px] ">
+                Versions Change Feature
+              </p>
+              <p className="font-bricolage font-bold text-black w-[272px] h-[36px] text-[30px]/[36px] ">
+                Real-Time Preview
+              </p>
+        </div>
+      </CardDescription>
+        </Card>
+        </div>
+        
+    </div>
+  )
+}
+SlidingSections.tsx: 
+// import ReactPlayer from "react-player";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+export default function SlidingSections() {
+  return (
+    <div className=" mt-[167px] mb-0">
+          <div
+            className="h-[1100px] flex justify-evenly w-full bg-cover bg-center"
+            style={{
+              backgroundImage: `url('/images/black shade.png')`,
+              borderTopRightRadius: "120px",
+            }}
+          >
+            <div className="relative h-[764px] w-[1039px]">
+            <img
+              src="/images/Group 35555.svg"
+              alt="Group 35555"
+              className="absolute top-[177px] left-[-4px] w-[1039px] h-[764px]"
+            />
+            <img
+              src="/images/image 57.png"
+              alt="Image57"
+              className="absolute h-[419px] w-[700px] top-[389px] left-[283px]"
+            />
+            </div>
+            <Card className="items-end mt-[187px] mr-[330px] h-[500px] w-[300px] border-transparent">
+              <CardHeader>
+                <CardTitle className="flex justify-between ">
+                  <div className=" font-bricolage font-normal text-white text-[20px] leading-[24px]">
+                    step 1
+                  </div>
+                </CardTitle>
+                <CardDescription className="pt-[6px] w-[436px] pl-0">
+                  <div className="text-white font-bold text-[40px]/[48px] ">Select your favorite</div>
+                  <div className=" font-bold text-[40px]/[48px] bg-clip-text text-transparent bg-gradient-to-r from-[#6158FC] via-[#FF3FA8] to-[#FF8234] ">Front-End Technology</div>
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="w-[272px] h-[48px] pt-[35px] pl-[18px] text-white space-y-2 ">
+                <div className=" flex justify-start space-x-2 ">
+                  <img src="/images/tailwindlogo.png"
+                   alt="tailwiind logo" 
+                    className="w-[20px] h-[20px] bg-contain bg-white rounded-full" />
+                <p className="font-bricolage font-normal text-[20px]/[24px]">
+                  Tailwind CSS
+                </p>
+                </div>                
+                <div className=" flex justify-start space-x-2">
+                  <img src="/images/bootstrap.png"
+                   alt="bootstrap" 
+                    className="w-[20px] h-[20px] bg-contain bg-white rounded-full" />
+                <p className="font-bricolage font-normal text-[20px]/[24px]">
+                  Bootstrap
+                </p>
+                </div>                
+                <div className=" flex justify-start space-x-2">
+                  <img src="/images/materialUI.png"
+                   alt="Material UI " 
+                    className="w-[20px] h-[20px] bg-contain bg-white rounded-full" />
+                <p className="font-bricolage font-normal text-[20px]/[24px]">
+                  Material UI
+                </p>
+                </div>
+                <div className=" flex justify-start space-x-2 ">
+                  <img src="/images/bulma.png"
+                   alt="bulma" 
+                    className="w-[20px] h-[20px] bg-contain bg-white rounded-full" />
+                <p className="font-bricolage font-normal text-[20px]/[24px]">
+                  Bulma
+                </p>
+                </div>
+              </CardContent>
+              <CardFooter className="pl-[12px] relative">
+                
+              </CardFooter>
+              <div className="relative">
+              <img src="/images/Rectangle 35.png" alt="rectangle " className="absolute  w-[24px] h-[22px] top-[-449px] left-[481px]"/>
+                  <img src="/images/Line 163.png" alt="line dashed" className="absolute  w-[2px] h-[692px] top-[-431px] left-[490px]"/>
+              <img src="/images/Rectangle 35.png" alt="rectangle " className="absolute  w-[24px] h-[22px] top-[245px] left-[481px]"/>
+              <img src="/images/Rectangle 35.png" alt="rectangle " className="absolute  w-[24px] h-[22px] top-[384px] left-[314px]"/>
+              <img src="/images/Line 163.png" alt="line dashed" className="absolute  w-[2px] h-[390px] top-[200px] left-[114px] rotate-90"/>
+              <img src="/images/Rectangle 35.png" alt="rectangle " className="absolute  w-[24px] h-[22px] top-[386px] left-[-80px]"/>
+                  </div>
+                  <div className="relative border-[1px] border-white h-[290px] w-[364px] top-[267px] left-[339px]">
+                    {/* <div className="absolute top-[267px] left-[339px]">
+                    </div> */}
+                    <img src="/images/box gradiant image.png" alt="image box" className="absolute top-[34px] left-[29px] w-[311px] h-[233px]" />
+                    <div className="absolute top-[107px] left-[101px] border-[2px] border-white w-[159px] h-[43px] text-center
+                     font-bricolage font-bold text-white text-[16px]/[19.2px] pt-[12px]">TRY DEMO
+                    </div>
+                    <img src="/images/Rectangle 43.png" alt=" rectangle" className=" absolute top-[100px] left-[100px] h-[10px] w-[10px]" />
+                    <img src="/images/Rectangle 43.png" alt=" rectangle" className="absolute top-[148px] left-[100px] h-[10px] w-[10px]" />
+                    <img src="/images/Rectangle 43.png" alt=" rectangle" className="absolute top-[100px] left-[251px] h-[10px] w-[10px]" />
+                    <img src="/images/Rectangle 43.png" alt=" rectangle" className="absolute top-[148px] left-[251px] h-[10px] w-[10px]" />
+
+                  </div>
+            </Card>
+
+          </div>
+
+          <div
+            className="h-[1100px] flex justify-evenly w-full bg-cover bg-center"
+            style={{
+              backgroundImage:`url('/images/gradiant image.png')`,
+            }}
+          >
+            <div className="relative h-[764px] w-[1039px]">
+            <img
+              src="/images/Group 35555.svg"
+              alt="Group 35555"
+              className="absolute top-[63px] left-[-4px] w-[1039px] h-[764px]"
+            />
+            <video
+            className=" absolute h-[419px] w-[700px] top-[272px] left-[283px] object-cover"
+            autoPlay
+            loop
+            muted
+            src="/images/video 3.mp4"
+          >
+            Your browser does not support the video tag.</video>
+            </div>
+            <Card className="items-end mt-[80px] mr-[330px] h-[500px] w-[300px] border-transparent">
+              <CardHeader>
+                <CardTitle className="flex justify-between ">
+                  <div className=" font-bricolage font-normal text-white text-[20px] leading-[24px]">
+                    step 2
+                  </div>
+                </CardTitle>
+                <CardDescription className="pt-[6px] w-[436px] pl-0">
+                  <div className="text-white font-bold text-[40px]/[48px] ">Choose UI Components & customized Styles</div>
+                  <div className="text-white font-semibold text-[25px]/[30px] pt-[19px] text-justify ">Shuffle streamlines your company's design team by providing 
+                  layouts constructed from over 10,000 UI components organized into categories like navigations, headers, features, and beyond.</div>
+                </CardDescription>
+              </CardHeader>
+              {/* <CardContent className="w-[272px] h-[48px] pt-[35px] pl-[18px] text-white space-y-2 ">
+                <div className=" flex justify-start space-x-2 ">
+                  <img src="/images/tailwindlogo.png"
+                   alt="tailwiind logo" 
+                    className="w-[20px] h-[20px] bg-contain bg-white rounded-full" />
+                <p className="font-bricolage font-normal text-[20px]/[24px]">
+                  Tailwind CSS
+                </p>
+                </div>                
+                <div className=" flex justify-start space-x-2">
+                  <img src="/images/bootstrap.png"
+                   alt="bootstrap" 
+                    className="w-[20px] h-[20px] bg-contain bg-white rounded-full" />
+                <p className="font-bricolage font-normal text-[20px]/[24px]">
+                  Bootstrap
+                </p>
+                </div>                
+                <div className=" flex justify-start space-x-2">
+                  <img src="/images/materialUI.png"
+                   alt="Material UI " 
+                    className="w-[20px] h-[20px] bg-contain bg-white rounded-full" />
+                <p className="font-bricolage font-normal text-[20px]/[24px]">
+                  Material UI
+                </p>
+                </div>
+                <div className=" flex justify-start space-x-2 ">
+                  <img src="/images/bulma.png"
+                   alt="bulma" 
+                    className="w-[20px] h-[20px] bg-contain bg-white rounded-full" />
+                <p className="font-bricolage font-normal text-[20px]/[24px]">
+                  Bulma
+                </p>
+                </div>
+              </CardContent> */}
+              <CardFooter className="pt-[35px] ">
+                <img src="/images/Group 35556.png" alt=" try demo" className="w-[166px] h-[50px]" />
+              </CardFooter>
+            </Card>
+
+          </div>
+
+          <div
+            className="h-[1100px] flex justify-evenly w-full bg-cover bg-center relative top-[-154px]"
+            style={{
+              backgroundImage: `url('/images/black shade.png')`,
+              borderTopRightRadius: "120px",
+            }}
+          >
+            <div className="relative h-[764px] w-[1039px]">
+            <img
+              src="/images/Group 35555.svg"
+              alt="Group 35555"
+              className="absolute top-[177px] left-[-4px] w-[1039px] h-[764px]"
+            />
+            {/* <img
+              src="/images/image 57.png"
+              alt="Image57"
+              className="absolute h-[419px] w-[700px] top-[389px] left-[283px]"
+            /> */}
+            <video
+            className=" absolute h-[419px] w-[700px] top-[389px] left-[283px] object-cover"
+            autoPlay
+            loop
+            muted
+            src="/images/video 2.mp4"
+          >
+            Your browser does not support the video tag.</video>
+            </div>
+            <Card className="items-end mt-[187px] mr-[330px] h-[500px] w-[300px] border-transparent">
+              <CardHeader>
+                <CardTitle className="flex justify-between ">
+                  <div className=" font-bricolage font-normal text-white text-[20px] leading-[24px]">
+                    step 3
+                  </div>
+                </CardTitle>
+                <CardDescription className="pt-[6px] w-[436px] pl-0">
+                  <div className="text-white font-bold text-[40px]/[48px] ">Download</div>
+                  <div className=" font-bold text-[40px]/[48px] bg-clip-text text-transparent bg-gradient-to-r from-[#6158FC] via-[#FF3FA8] to-[#FF8234] ">Source Code</div>
+                  <div className="text-white font-medium w-[396.03px] text-[25px]/[30px] pt-[19px] text-justify">Simply hit export and download your project complete 
+                    with all source files. Enjoy a seamless collaboration experience without 
+                    any external dependencies or vendor restrictions.</div> 
+                </CardDescription>
+              </CardHeader>
+              <CardFooter className="pl-[12px] relative">
+                
+              </CardFooter>
+              <div className="relative">
+              <img src="/images/Rectangle 35.png" alt="rectangle " className="absolute  w-[24px] h-[22px] top-[-589px] left-[481px]"/>
+                  <img src="/images/Line 163.png" alt="line dashed" className="absolute  w-[2px] h-[692px] top-[-564px] left-[490px]"/>
+              <img src="/images/Rectangle 35.png" alt="rectangle " className="absolute  w-[24px] h-[22px] top-[130px] left-[481px]"/>
+              <img src="/images/Rectangle 35.png" alt="rectangle " className="absolute  w-[24px] h-[22px] top-[244px] left-[315px]"/>
+              <img src="/images/Line 163.png" alt="line dashed" className="absolute  w-[2px] h-[390px] top-[63px] left-[114px] rotate-90"/>
+              <img src="/images/Rectangle 35.png" alt="rectangle " className="absolute  w-[24px] h-[22px] top-[244px] left-[-80px]"/>
+                  </div>
+                  <div className="relative border-[1px] border-white h-[290px] w-[364px] top-[151px] left-[339px]">
+                    {/* <div className="absolute top-[267px] left-[339px]">
+                    </div> */}
+                    <img src="/images/box gradiant image.png" alt="image box" className="absolute top-[34px] left-[29px] w-[311px] h-[233px]" />
+                    <div className="absolute top-[107px] left-[101px] border-[2px] border-white w-[159px] h-[43px] text-center
+                     font-bricolage font-bold text-white text-[16px]/[19.2px] pt-[12px]">TRY DEMO
+                    </div>
+                    <img src="/images/Rectangle 43.png" alt=" rectangle" className=" absolute top-[100px] left-[100px] h-[10px] w-[10px]" />
+                    <img src="/images/Rectangle 43.png" alt=" rectangle" className="absolute top-[148px] left-[100px] h-[10px] w-[10px]" />
+                    <img src="/images/Rectangle 43.png" alt=" rectangle" className="absolute top-[100px] left-[251px] h-[10px] w-[10px]" />
+                    <img src="/images/Rectangle 43.png" alt=" rectangle" className="absolute top-[148px] left-[251px] h-[10px] w-[10px]" />
+
+                  </div>
+            </Card>
+
+          </div>
+    </div>
+  );
+};
+Footer.tsx:
+
+export default function Footer() {
+  return (
+    <div>
+        <div className="w-full  h-[1079px]"style={{
+              backgroundImage:`url('/images/black shade.png')`,
+              borderTopRightRadius: "120px"
+            }}>
+            <div className="">
+                <img src="/images/Line 170.png" alt="line" className="w-[426px] relative left-[1487px] top-[222px]"  />
+                <img src="/images/Line 170.png" alt="line" className="w-[426px] relative top-[222px] left-[-23px]"  />
+                <img src="/images/white border.png" alt="border" className="w-[1108px] relative top-[95px] left-[392px]"  />
+                <div className="flex justify-center  text-white">
+                    <div className=" w-[935px] text-center font-extrabold font-bricolage mt-[-84px] text-[120px]/[144px]">THEMEBUILDER</div>
+                </div>
+            </div>
+            <div className="flex justify-center items-center w-[713px] h-[48px]">
+                <div className="text-white">Easiest way to create stunning layout</div>
+            </div>
+            </div>
+        <div className="bg-black w-full h-[962px]">
+            <div className=" flex justify-center ">
+                <div className="flex justify-evenly  mt-[110px] w-[70%] h-[480px]">
+                    <div className="flex flex-col w-[20%] h-[480px]">
+                        <div className="text-[50px]/[80px] font-bold text-[#FFFFFF61] ">Products</div>
+                        <div className=" text-white font-medium font-Inter text-[30px]/[80px]">Tailwind Editor </div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]">Bootstrap Editor </div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]" >Bulma Editor </div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]">Material-UI Editor </div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]">React Editor</div>
+                    </div>
+                    <div className="flex flex-col w-[30%] h-[480px]">
+                        <div className="text-[50px]/[80px] font-bold text-[#FFFFFF61] ">UI Components</div>
+                        <div className=" text-white font-medium font-Inter text-[30px]/[80px]">Tailwind Component </div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]">Bootstrap Component </div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]" >Bulma Component </div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]">Material-UI Component </div>
+                    </div>
+                    <div className="flex flex-col w-[20%] h-[480px]">
+                        <div className="text-[50px]/[80px] font-bold text-[#FFFFFF61] ">Company</div>
+                        <div className=" text-white font-medium font-Inter text-[30px]/[80px]">About us </div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]">Blog</div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]" >Suport</div>
+                    </div>
+                    <div className="flex flex-col w-[20%] h-[480px]">
+                        <div className="text-[50px]/[80px] font-bold text-[#FFFFFF61] ">Legal</div>
+                        <div className=" text-white font-medium font-Inter text-[30px]/[80px]">Terms of service </div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]">Privacy Policy</div>
+                        <div className="text-white font-medium font-Inter text-[30px]/[80px]" >Licenses</div>
+                    </div>
+                </div>
+            </div>
+            <div className="flex justify-evenly border-white text-white w-[538px] h-[48px] ml-[600px] mt-[100px] mb-[78px] ">
+                <div className="font-bricolage font-medium text-[40px]/[48px]">Contact with Us</div>
+                <div className="flex space-x-5 ">
+                    <img src="/images/instagram.png" alt="instagram" className="w-[40px] h-[40px]" />
+                    <img src="/images/facebook.png" alt="instagram" className="w-[40px] h-[40px]" />
+                    <img src="/images/x.png" alt="instagram" className="w-[40px] h-[40px]" />
+                </div>
+            </div>
+            <div className="flex  w-full h-[180px] font-extrabold font-bricolage text-[150px]/[180px]">
+                <div className="flex animate-marquee space-x-[20px]">
+                    <div className="text-white">Build</div>
+                    <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#6158FC] via-[#FF3FA8] to-[#FF8234]">Better</div>
+                    <div className="text-white">Build</div>
+                    <div className="bg-clip-text text-transparent bg-gradient-to-r from-[#6158FC] via-[#FF3FA8] to-[#FF8234]">Faster</div>
+                    
+                </div>
+                
+    </div>
+        </div>
+    </div>
+  )
+}
+
